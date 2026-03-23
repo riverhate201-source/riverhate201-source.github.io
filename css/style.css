@@ -1,0 +1,67 @@
+* {}
+
+
+body {
+    background-image: url(https://i.postimg.cc/DZ2wddkb/Kakao-Talk-20260319-152008620.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+
+    margin-top: 30PX;
+    margin-bottom: auto;
+}
+
+
+
+.center {
+    text-align: center;
+}
+
+h1 {
+    font-size: 40px;
+    font-weight: bold;
+    color: rgb(152, 214, 255);
+    margin-bottom: 40px;
+    font-family: 'GmarketSansMedium', sans-serif;
+}
+
+@font-face {
+    font-family: 'OngleipParkDahyeon';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2411-3@1.0/Ownglyph_ParkDaHyun.woff2') format('woff2');
+    font-weight: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'GmarketSansMedium';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+h2,
+p {
+    font-family: 'OngleipParkDahyeon', sans-serif;
+    margin-top: 30PX;
+    margin-bottom: auto;
+    line-height: 1.6;
+
+}
+
+section {
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.neon-title {
+    font-family: 'GmarketSansMedium', sans-serif;
+    color: white;
+    text-shadow: 0 0 5px #fff, 0 0 20px deepskyblue, 0 0 40px deepskyblue, 0 0 80px deepskyblue;
+    display: inline-block;
+    transition: all 0.4s ease-in-out;
+}
+
+body {
+    margin-top: 30PX;
+    margin-bottom: auto;
+}
