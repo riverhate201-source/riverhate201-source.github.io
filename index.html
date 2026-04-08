@@ -4,7 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>피그마 레이아웃</title>
+    <title>오리고기로 실습하기</title>
+
+    <link rel="stylesheet" href="./css/reset.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&family=Sunshiney&display=swap"
@@ -12,27 +14,75 @@
     <link rel="stylesheet" href="./css/style.css">
 </head>
 
+
 <body>
-    <section class="main">
-        <div class="title">
-            <h2>이창훈</h2>
-            <p>가나다라마바사 아자차카타파하 아이우에오 카키쿠케코 사시스세소 마미므메모 타치츠테토</p>
-        </div>
-        <div class="inner">
-            <div class="itm">
-                <img src="./images/img01.jpg" alt="피그마">
+    <div class="wrap">
+        <header class="header">
+            <div class="hd_wrap">
+                <h1 class="logo">
+                    <a href="/">
+                        <img src="./images/logo.svg" alt="참숯오리공장">
+                    </a>
+                </h1>
+                <nav class="gnb">
+                    <ul>
+                        <li><a href="#">메뉴 소개</a></li>
+                        <li><a href="#">인테리어</a></li>
+                        <li><a href="#">매출</a></li>
+                        <li><a href="#">창업 비용</a></li>
+                        <li><a href="#">창업 문의</a></li>
+                    </ul>
+                </nav>
+
+                <div class="utils">
+                    <a href="#">
+                        <img src="./images/icon.svg" alt="참숯오리공장">
+                    </a>
+                </div>
             </div>
-            <div class="itm">
-                <img src="./images/img02.jpg" alt="피그마">
+        </header>
+        <section class="main_visual">
+            <div class="slg">
+                <h2>참숯 오리공장</h2>
+                <p>한 번 오시면 단골 됩니다</p>
             </div>
-            <div class="itm">
-                <img src="./images/img03.jpg" alt="피그마">
+        </section>
+
+        <section class="main_info">
+            <div class="title">
+                <h2>참숯 오리공장 메뉴</h2>
+                <p>언제나 믿을 수 있는 음식으로 대접하겠습니다</p>
             </div>
-            <div class="itm">
-                <img src="./images/img04.jpg" alt="피그마">
+            <div class="inner">
+                <div class="itm">
+                    <div class="img_box">
+                        <img src="./images/itm_01.jpg" alt="참숯오리공장">
+                    </div>
+                </div>
+                <div class="itm">
+                    <div class="img_box">
+                        <img src="./images/itm_02.jpg" alt="참숯오리공장">
+                    </div>
+                </div>
+                <div class="itm">
+                    <div class="img_box">
+                        <img src="./images/itm_03.jpg" alt="참숯오리공장">
+                    </div>
+                </div>
             </div>
-        </div>
-    </section>
+
+        </section>
+        <main>
+
+        </main>
+        <footer class="footer">
+            <address class="inner">
+                <p>경기도 안산시 상록구 본오로 169 비01호</p>
+                <strong>COPYRIGHT©㈜참숯오리공장. ALL RIGHTS RESERVED.</strong>
+            </address>
+
+        </footer>
+    </div>
 </body>
 
 </html>
