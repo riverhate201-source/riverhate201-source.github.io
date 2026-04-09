@@ -1,74 +1,53 @@
+@font-face {
+    font-family: 'Pretendard';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Light.woff2') format('woff2');
+    font-weight: 300;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-SemiBold.woff2') format('woff2');
+    font-weight: 600;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-display: swap;
+}
+
+
 body {
     color: #333;
-    font-family: "Noto Sans KR", sans-serif;
+    font-family: 'Pretendard', sans-serif;
 }
 
-.header {}
-
-.header .hd_wrap {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 0 auto;
-    max-width: 1200px;
-    height: 120px;
-}
-
-.header .gnb>ul {
-    display: flex;
-    gap: 40px;
-}
-
-.main_visual {
-    position: relative;
-    height: calc(100vh - 120px);
-    background: url(../images/main_visual01.jpg) no-repeat center center/cover;
-}
-
-.main_visual .slg {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-.main_visual .slg h2 {
-    font-size: 80px;
-    font-weight: 900;
-    color: #fff;
-    text-align: center;
-}
-
-.main_visual .slg p {
-    margin-top: 16px;
-    font-size: 16px;
-    font-weight: 400;
-    color: #fff;
-    text-align: center;
-}
-
-.main_info {
+.main_product {
     padding: 96px 0;
 }
 
-.main_info .title {
+.main_product .title {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 15px;
 }
 
-.main_info .title h2 {
-    font-size: 40px;
+.main_product .title h2 {
+    font-size: 48px;
     font-weight: 700;
 }
 
-.main_info .title p {
+.main_product .title p {
     margin-top: 16px;
     font-size: 16px;
-    font-weight: 400;
+    font-weight: 300;
 }
 
-.main_info .inner {
+.main_product .inner {
+
     display: flex;
     gap: 30px;
     max-width: 1200px;
@@ -77,27 +56,23 @@ body {
     padding: 0 15px;
 }
 
-.main_info .inner .itm {
+.main_product .inner .itm {
+
     flex: 1;
 
 }
 
-
-.footer {
-    padding: 80px 0;
-    background: #f9f9f9;
-}
-
-.footer .inner {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 15px;
-    font-style: normal;
-}
-
-.footer .inner strong {
-    margin-top: 8px;
+.main_product .inner .txt_box strong {
     display: block;
-    font-weight: 400;
+    margin-top: 16px;
+    font-size: 16px;
+    font-weight: 600;
+    text-align: center;
+}
 
+.main_product .inner .txt_box p {
+    margin-top: 8px;
+    font-size: 16px;
+    font-weight: 300;
+    text-align: center;
 }
