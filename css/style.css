@@ -1,32 +1,201 @@
-@font-face {
-    font-family: 'Pretendard';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Light.woff2') format('woff2');
-    font-weight: 300;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Pretendard';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-SemiBold.woff2') format('woff2');
-    font-weight: 600;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Pretendard';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Bold.woff2') format('woff2');
-    font-weight: 700;
-    font-display: swap;
-}
-
-
 body {
+    font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
     color: #333;
-    font-family: 'Pretendard', sans-serif;
+    line-height: 1;
+}
+
+.bilnd {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+.header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+}
+
+.header .hd_wrap {
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 120px;
+    max-width: 1200px;
+}
+
+.header .gnb {}
+
+.header .gnb>ul {
+    display: flex;
+    gap: 48px;
+}
+
+.header .gnb>ul>li {
+    position: relative;
+}
+
+.header .gnb>ul>li>a {
+    display: block;
+    color: #fff;
+    white-space: nowrap;
+    line-height: 120px;
+}
+
+.header .gnb>ul>li ul {
+    position: absolute;
+    top: 120px;
+    left: 50%;
+    transform: translate(-50%, 0);
+
+    display: none;
+
+    background: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(4px);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.header .gnb>ul>li:hover ul {
+    display: block;
+}
+
+.header .gnb>ul>li ul li a {
+    display: block;
+    line-height: 40px;
+    padding: 0 40px;
+    white-space: nowrap;
+    color: #fff;
+    font-size: 14px;
+}
+
+.header .gnb>ul>li ul li~li a {
+    border-top: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.main_visual {}
+
+.main_visual .main_visual_slide {}
+
+.main_visual .main_visual_slide .itm {
+    position: relative;
+    height: 100vh;
+}
+
+
+.main_visual .main_visual_slide .itm::before {
+    content: "";
+    position: absolute;
+    inset: 0 0 0 0;
+    background: #000;
+    opacity: 0.4;
+}
+
+.main_visual .main_visual_slide .itm01 {
+    background: url(../images/main_visual_img_01.jpg) no-repeat center center/cover;
+}
+
+.main_visual .main_visual_slide .itm02 {
+    background: url(../images/main_visual_img_02.jpg) no-repeat center center/cover;
+}
+
+.main_visual .main_visual_slide .itm03 {
+    background: url(../images/main_visual_img_03.jpg) no-repeat center center/cover;
+}
+
+.main_visual .main_visual_slide .itm .slg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.main_visual .main_visual_slide .itm .slg strong {
+    display: block;
+    font-size: 48px;
+    font-weight: 800;
+    text-align: center;
+    color: #fff;
+}
+
+.main_visual .main_visual_slide .itm .slg p {
+    margin-top: 16px;
+    font-size: 16px;
+    font-weight: 400;
+    text-align: center;
+    color: #fff;
+}
+
+.main_visual .arrows {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 4;
+    transform: translate(-50%, -50%);
+
+    width: calc(100% - 48px);
+}
+
+.main_visual .arrows button {
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+
+    width: 120px;
+    height: 120px;
+    border: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(4px);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    cursor: pointer;
+}
+
+.main_visual .arrows button .icon {
+    vertical-align: middle;
+    width: 40px;
+    color: #fff;
+    stroke-width: 1px;
+}
+
+.main_visual .arrows .prev {
+    left: 0;
+}
+
+.main_visual .arrows .next {
+    right: 0;
+}
+
+.main_visual .page {
+    position: absolute;
+    bottom: 80px;
+    left: 50%;
+    z-index: 4;
+    transform: translate(-50%, 0);
+
+    width: auto;
+}
+
+.main_visual .page span {
+    width: 40px;
+    height: 4px;
+    opacity: 1;
+    border-radius: 0;
+
+    background: rgba(0, 0, 0, 0.4);
+}
+
+.main_visual .page span.swiper-pagination-bullet-active {
+    background: hwb(9 28% 0%);
 }
 
 .main_product {
-    padding: 96px 0;
+    padding: 120px 0;
 }
 
 .main_product .title {
@@ -43,36 +212,83 @@ body {
 .main_product .title p {
     margin-top: 16px;
     font-size: 16px;
-    font-weight: 300;
+    font-weight: 400;
 }
 
 .main_product .inner {
-
-    display: flex;
-    gap: 30px;
-    max-width: 1200px;
     margin: 0 auto;
     margin-top: 40px;
+    max-width: 1200px;
+    display: flex;
     padding: 0 15px;
+    gap: 30px;
 }
 
 .main_product .inner .itm {
-
     flex: 1;
-
 }
 
-.main_product .inner .txt_box strong {
-    display: block;
+.main_product .inner .itm img {}
+
+.main_product .inner .itm .txt_box strong {
     margin-top: 16px;
+    display: block;
+    text-align: center;
     font-size: 16px;
     font-weight: 600;
-    text-align: center;
 }
 
-.main_product .inner .txt_box p {
+.main_product .inner .itm .txt_box p {
     margin-top: 8px;
-    font-size: 16px;
-    font-weight: 300;
     text-align: center;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.main_product .inner .itm .txt_box em {
+    display: block;
+    margin-top: 16px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+
+.footer {
+
+    background: #f9f9f9;
+    color: #999;
+    padding: 60px 0;
+    font-size: 16px;
+
+}
+
+.footer .inner {
+    padding: 0 15px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer_menu {
+    display: flex;
+    gap: 24px;
+}
+
+.footer_menu li {
+    color: #666;
+    font-weight: 500;
+}
+
+.footer_info {
+    margin-top: 16px;
+}
+
+.footer_info p {
+    margin-top: 8px;
+}
+
+.copyright {
+    margin-top: 16px;
+    font-size: 16px;
+    color: #777;
 }

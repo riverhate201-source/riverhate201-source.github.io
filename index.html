@@ -4,48 +4,183 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>피그마 실습 01</title>
-
+    <title>슬라이드 만들기</title>
     <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" as="style" crossorigin
+        href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
     <link rel="stylesheet" href="./css/style.css">
+
+    <script src="./js/jquery-1.12.4.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="./js/custom.js"></script>
 </head>
 
 <body>
+    <div class="header">
+        <div class="hd_wrap">
+            <h1>
+                <a href="/">
+                    <img src="./images/logo_w.svg" alt="gkrltlfgjd">
+                </a>
+            </h1>
+
+            <nav class="gnb">
+                <ul>
+
+                    <li>
+                        <a href="#">의류</a>
+                        <ul>
+                            <li><a href="#">바지</a></li>
+                            <li><a href="#">원피스</a></li>
+                            <li><a href="#">셔츠</a></li>
+                            <li><a href="#">티셔츠</a></li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <a href="#">MD</a>
+                        <ul>
+                            <li><a href="#">공식엠디안내</a></li>
+                            <li><a href="#">엠디구성</a></li>
+                            <li><a href="#">FAQ</a></li>
+                            <li><a href="#">공식모델</a></li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <a href="#">인기</a>
+                        <ul>
+                            <li><a href="#">많이 선택한 기준</a></li>
+                            <li><a href="#">베스트 셀렉션</a></li>
+                            <li><a href="#">주목받는 아이템</a></li>
+                            <li><a href="#">사랑받는 제품</a></li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <a href="#">브랜드</a>
+                        <ul>
+                            <li><a href="#">브랜드 라인업</a></li>
+                            <li><a href="#">브랜드의 집합</a></li>
+                            <li><a href="#">신뢰를 담은 선택</a></li>
+                            <li><a href="#">브랜드의 철학</a></li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <a href="#">매장안내</a>
+                        <ul>
+                            <li><a href="#">매장찾기</a></li>
+                            <li><a href="#">오픈예정</a></li>
+                            <li><a href="#">가맹문의</a></li>
+                        </ul>
+                    </li>
+
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <section class="main_visual">
+        <h2 class="bilnd">메인 비주얼</h2>
+        <div class="swiper main_visual_slide">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide itm itm01">
+                    <div class="slg">
+                        <strong>절제된 아름다움</strong>
+                        <p>일상의 기준을 한 단계 끌어올리는 선택</p>
+                    </div>
+                </div>
+                <div class="swiper-slide itm itm02">
+                    <div class="slg">
+                        <strong>가치 있는 선택</strong>
+                        <p>불필요함을 덜어내고 완성한 균형 잡힌 디자인</p>
+                    </div>
+                </div>
+                <div class="swiper-slide itm itm03">
+                    <div class="slg">
+                        <strong>본질에 집중하다</strong>
+                        <p>시간이 지나도 변하지 않는 스타일</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="arrows">
+                <button class="prev">
+                    <i data-lucide="arrow-big-left" class="icon"></i>
+                </button>
+                <button class="next">
+                    <i data-lucide="arrow-big-right" class="icon"></i>
+                </button>
+            </div>
+
+            <div class="page"></div>
+        </div>
+    </section>
+
     <section class="main_product">
         <div class="title">
-            <h2>봄은 마음에도 꽃을 피운다</h2>
-            <p>두근거림이 피어나는 순간</p>
+            <h2>KLOUD NINE</h2>
+            <p>Beyond the Clouds_아무렇지 않게 떠오르는 가장 나다운 스타일</p>
         </div>
         <div class="inner">
             <div class="itm">
                 <div class="img_box">
-                    <img src="./images/itm01.jpg" alt="vlrmak">
+                    <img src="./images/itm01.jpg" alt="의류디자인">
                 </div>
                 <div class="txt_box">
-                    <strong>스쳐가는 바람에도</strong>
-                    <p>봄은 소리 없이 마음을 흔든다</p>
+                    <strong>와이드 팬츠</strong>
+                    <p>골반핏이 무너지지 않게</p>
+                    <em>25000원</em>
                 </div>
             </div>
             <div class="itm">
                 <div class="img_box">
-                    <img src="./images/itm02.jpg" alt="vlrmak">
+                    <img src="./images/itm02.jpg" alt="의류디자인">
                 </div>
                 <div class="txt_box">
-                    <strong>따뜻함이 머무는 시간</strong>
-                    <p>햇살 한 스푼, 바람 두 스푼의 계절</p>
+                    <strong>모던 화이트 원피스</strong>
+                    <p>어깨에서 딱 떨어지는 스타일</p>
+                    <em>19000원</em>
                 </div>
             </div>
             <div class="itm">
                 <div class="img_box">
-                    <img src="./images/itm03.jpg" alt="vlrmak">
+                    <img src="./images/itm03.jpg" alt="의류디자인">
                 </div>
                 <div class="txt_box">
-                    <strong>결국, 봄은 온다</strong>
-                    <p>꽃이 피는 건, 결국 견뎌낸 시간 덕분이다</p>
+                    <strong>와이드 셔츠</strong>
+                    <p>일상 속 반듯함을 선물하세요</p>
+                    <em>37000원</em>
                 </div>
             </div>
         </div>
     </section>
+
+    <footer class="footer">
+        <div class="inner">
+
+            <ul class="footer_menu">
+                <li><a href="#">개인정보처리방침</a></li>
+                <li><a href="#">이용약관</a></li>
+                <li><a href="#">가맹문의</a></li>
+                <li><a href="#">매장찾기</a></li>
+            </ul>
+
+            <div class="footer_info">
+                <p>부산진구시 ㅇㅇ구 ㅇㅇㅇ로 123, 의류빌딩 7층</p>
+                <p>대표 : ㅇㅇㅇ | 사업자등록번호 : 567-8-9123</p>
+                <p>TEL : 01-234-5678 | FAX : 12-345-6789</p>
+                <p>E-mail : abcde@KLOUDNINE.co.kr</p>
+            </div>
+
+            <div class="copyright">
+                <p>COPYRIGHT © KLOUD NINE CO., LTD. ALL RIGHTS RESERVED.</p>
+            </div>
+
+        </div>
+    </footer>
 </body>
 
 </html>
