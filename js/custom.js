@@ -11,15 +11,78 @@ $(function () {
 
         // Navigation arrows
         navigation: {
-            nextEl: '.main_visual .arrows .prev',
-            prevEl: '.main_visual .arrows .next',
+            nextEl: '.main_visual .arrows .next',
+            prevEl: '.main_visual .arrows .prev',
         },
 
-        // If we need pagination
-        pagination: {
-            clickable: true,
-            el: '.main_visual .page',
-        },
+    
 
     });
+
+
+    $(window).scroll(function () {
+        let sct = $(window).scrollTop();
+
+        if (sct > 0) {
+            $('.header').addClass('scrolled'); // CSS에 신호 줌
+            $('#logo-img').attr('src', './images/logo_black.svg');
+            $('#utils-img').attr('src', './images/utils_black.svg');
+        } else {
+            $('.header').removeClass('scrolled'); // 맨 위로 오면 신호 뺌
+            // 마우스가 헤더에 없을 때만 흰색 로고로 복구
+            if (!$('.header').is(':hover')) {
+                $('#logo-img').attr('src', './images/logo_white.svg');
+                $('#utils-img').attr('src', './images/utils_white.svg');
+            }
+        }
+    });
+
+   
+    $('.header').hover(
+        function () {
+            
+            $('#logo-img').attr('src', './images/logo_black.svg');
+            $('#utils-img').attr('src', './images/utils_black.svg');
+        },
+        function () {
+            
+            let sct = $(window).scrollTop();
+            if (sct === 0) {
+                $('#logo-img').attr('src', './images/logo_white.svg');
+                $('#utils-img').attr('src', './images/utils_white.svg');
+            }
+        }
+    );
+
+    $('.tab_menu>li').on('click', function () {
+        let idx = $(this).index();
+        $('.tab_menu>li').removeClass('on');
+        $(this).addClass('on');
+        $('.tab_content>li').removeClass('on')
+        $('.tab_content>li').eq(idx).addClass('on')
+    })
+
+
+    $(window).scroll(function () {
+        let sct = $(window).scrollTop();
+
+        if (sct > 300) {
+
+            $('#top-btn').addClass('show');
+            $('.floating-menu').addClass('on');
+        } else {
+            $('#top-btn').removeClass('show');
+            $('.floating-menu').removeClass('on');
+        }
+    });
+
+    $('#top-btn').click(function () {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+
+    AOS.init({
+        duration: 1000, 
+        once: false,
+    });
+
 });

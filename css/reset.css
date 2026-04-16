@@ -9,16 +9,18 @@ ol {
     list-style: none;
 }
 
+
+
 a {
     text-decoration: none;
     color: inherit;
 }
 
-em {
-    font-style: normal;
-}
-
 img {
     max-width: 100%;
     vertical-align: top;
+}
+
+body {
+    line-height: 1;
 }
