@@ -15,7 +15,7 @@ $(function () {
             prevEl: '.main_visual .arrows .prev',
         },
 
-    
+
 
     });
 
@@ -24,12 +24,12 @@ $(function () {
         let sct = $(window).scrollTop();
 
         if (sct > 0) {
-            $('.header').addClass('scrolled'); // CSS에 신호 줌
+            $('.header').addClass('scrolled');
             $('#logo-img').attr('src', './images/logo_black.svg');
             $('#utils-img').attr('src', './images/utils_black.svg');
         } else {
-            $('.header').removeClass('scrolled'); // 맨 위로 오면 신호 뺌
-            // 마우스가 헤더에 없을 때만 흰색 로고로 복구
+            $('.header').removeClass('scrolled');
+
             if (!$('.header').is(':hover')) {
                 $('#logo-img').attr('src', './images/logo_white.svg');
                 $('#utils-img').attr('src', './images/utils_white.svg');
@@ -37,15 +37,15 @@ $(function () {
         }
     });
 
-   
+
     $('.header').hover(
         function () {
-            
+
             $('#logo-img').attr('src', './images/logo_black.svg');
             $('#utils-img').attr('src', './images/utils_black.svg');
         },
         function () {
-            
+
             let sct = $(window).scrollTop();
             if (sct === 0) {
                 $('#logo-img').attr('src', './images/logo_white.svg');
@@ -81,7 +81,7 @@ $(function () {
     });
 
     AOS.init({
-        duration: 1000, 
+        duration: 1000,
         once: false,
     });
 
